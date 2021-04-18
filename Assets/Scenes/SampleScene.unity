@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.043393537, g: 0.044554476, b: 0.059299786, a: 1}
+  m_IndirectSpecularColor: {r: 0.23236844, g: 0.23554417, b: 0.27230176, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 6185770208999525836, guid: 345786026fa1e4f4584ca912f7fa86e2, type: 3}
-  maxScale: 100
+  maxScale: 300
   offset: {x: 0, y: 0, z: 0}
   left_to_right: 1
   startSize: 10
@@ -1328,7 +1328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 6185770208999525836, guid: 345786026fa1e4f4584ca912f7fa86e2, type: 3}
-  maxScale: 100
+  maxScale: 300
   offset: {x: 0, y: 90, z: 0}
   left_to_right: 0
   startSize: 10
