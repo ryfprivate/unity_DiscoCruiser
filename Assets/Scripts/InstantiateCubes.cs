@@ -8,19 +8,24 @@ public class InstantiateCubes : MonoBehaviour
     public float maxScale;
     public static int numCubes = 512;
     private GameObject[] sampleCubes = new GameObject[numCubes];
+    public Vector3 offset;
+    public bool left_to_right;
 
     void Start()
     {
+
         for (int i = 0; i < numCubes; i++)
         {
             GameObject cubeInstance = (GameObject)Instantiate(cubePrefab);
             cubeInstance.transform.position = this.transform.position;
             cubeInstance.transform.parent = this.transform;
             cubeInstance.name = "SampleCube" + i;
-            this.transform.eulerAngles = new Vector3(0, -(360f / numCubes) * i, 0);
-            cubeInstance.transform.position = Vector3.forward * 40;
-            sampleCubes[i] = cubeInstance;
+            this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, (90f / numCubes) * i, this.transform.eulerAngles.z);
+            cubeInstance.transform.position = Vector3.forward * 400;
+            int idx = left_to_right ? i : numCubes - 1 - i;
+            sampleCubes[idx] = cubeInstance;
         }
+        this.transform.eulerAngles = offset;
     }
 
     void Update()
