@@ -21,8 +21,11 @@ public class EndGate : MonoBehaviour
         // Debug.Log("collission" + other.gameObject.tag);
         if (other.gameObject.tag == "DeletePortal")
         {
-            Destroy(gameObject.transform.parent.gameObject);
+            // Destroy(gameObject.transform.parent.gameObject);
         }
-
+        if (other.gameObject.tag == "SpawnPortal")
+        {
+            SpawnPortal.i.Spawn();
+        }
     }
 }
