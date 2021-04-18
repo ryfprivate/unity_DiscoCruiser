@@ -10,6 +10,7 @@ public class InstantiateCubes : MonoBehaviour
     private GameObject[] sampleCubes = new GameObject[numCubes];
     public Vector3 offset;
     public bool left_to_right;
+    public float startSize;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class InstantiateCubes : MonoBehaviour
         {
             if (sampleCubes != null)
             {
-                Vector3 newScale = new Vector3(transform.localScale.x, (AudioPeer.samples[i] * maxScale), transform.localScale.z);
+                Vector3 newScale = new Vector3(transform.localScale.x, (AudioPeer.samples[i] * maxScale) + startSize, transform.localScale.z);
 
                 sampleCubes[i].transform.localScale = newScale;
                 sampleCubes[i].transform.position = new Vector3(sampleCubes[i].transform.position.x, 0 + newScale.y / 2, sampleCubes[i].transform.position.z);
