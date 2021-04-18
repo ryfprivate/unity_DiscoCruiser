@@ -12,9 +12,10 @@ public class InstantiateCubes : MonoBehaviour
     public bool left_to_right;
     public float startSize;
 
+    private float[] initialSizes = new float[numCubes];
+
     void Start()
     {
-
         for (int i = 0; i < numCubes; i++)
         {
             GameObject cubeInstance = (GameObject)Instantiate(cubePrefab);
@@ -25,6 +26,7 @@ public class InstantiateCubes : MonoBehaviour
             cubeInstance.transform.position = Vector3.forward * 400;
             int idx = left_to_right ? i : numCubes - 1 - i;
             sampleCubes[idx] = cubeInstance;
+            initialSizes[idx] = Random.Range(0, startSize);
         }
         this.transform.eulerAngles = offset;
     }
@@ -35,7 +37,7 @@ public class InstantiateCubes : MonoBehaviour
         {
             if (sampleCubes != null)
             {
-                Vector3 newScale = new Vector3(transform.localScale.x, (AudioPeer.samples[i] * maxScale) + startSize, transform.localScale.z);
+                Vector3 newScale = new Vector3(transform.localScale.x, (AudioPeer.samples[i] * maxScale) + initialSizes[i], transform.localScale.z);
 
                 sampleCubes[i].transform.localScale = newScale;
                 sampleCubes[i].transform.position = new Vector3(sampleCubes[i].transform.position.x, 0 + newScale.y / 2, sampleCubes[i].transform.position.z);
