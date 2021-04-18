@@ -58,6 +58,8 @@
     <Compile Include="Assets\Scripts\AudioPeer.cs" />
     <Compile Include="Assets\Scripts\Car.cs" />
     <Compile Include="Assets\Scripts\Scenery.cs" />
+    <Compile Include="Assets\Scripts\Gates\StartGate.cs" />
+    <Compile Include="Assets\Scripts\Gates\EndGate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
