@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\FreqBandCube.cs" />
     <Compile Include="Assets\Scripts\AudioPeer.cs" />
     <Compile Include="Assets\Scripts\Car.cs" />
+    <Compile Include="Assets\Scripts\Scenery.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

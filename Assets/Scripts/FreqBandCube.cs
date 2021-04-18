@@ -39,7 +39,7 @@ public class FreqBandCube : MonoBehaviour
 
             newScale = new Vector3(transform.localScale.x, (scaleAmount * maxScale) + startSize, transform.localScale.z);
             transform.localScale = newScale;
-            transform.position = new Vector3(initialPosition.x, initialPosition.y - .5f + newScale.y / 2, initialPosition.z);
+            transform.position = new Vector3(transform.position.x, initialPosition.y - .5f + newScale.y / 2, transform.position.z);
         }
 
     }

@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Car : MonoBehaviour
+public class Scenery : MonoBehaviour
 {
-    public GameObject[] wheels;
     public float speed;
-
-    void Update()
+    void Start()
     {
-        for (int i = 0; i < wheels.Length; i++)
-        {
-            wheels[i].transform.Rotate(1f, 0, 0);
-        }
+
     }
+
 
     void FixedUpdate()
     {
