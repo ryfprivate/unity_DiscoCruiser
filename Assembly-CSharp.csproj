@@ -53,15 +53,16 @@
     <UnityVersion>2020.1.14f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
+    <Compile Include="Assets\Scripts\Gates\StartGate.cs" />
     <Compile Include="Assets\Scripts\InstantiateCubes.cs" />
     <Compile Include="Assets\Scripts\FreqBandCube.cs" />
     <Compile Include="Assets\Scripts\AudioPeer.cs" />
-    <Compile Include="Assets\Scripts\Car.cs" />
-    <Compile Include="Assets\Scripts\Scenery.cs" />
-    <Compile Include="Assets\Scripts\Gates\StartGate.cs" />
     <Compile Include="Assets\Scripts\Gates\EndGate.cs" />
     <Compile Include="Assets\Scripts\Portals\SpawnPortal.cs" />
-    <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
+    <Compile Include="Assets\Scripts\Scenery.cs" />
+    <Compile Include="Assets\Scripts\Car.cs" />
+    <Compile Include="Assets\Scripts\Portals\DeletePortal.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Materials\Stylized Sky.shader" />
