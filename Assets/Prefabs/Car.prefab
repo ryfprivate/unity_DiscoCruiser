@@ -214,9 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   band: 0
-  startSize: 0.5
-  maxScale: 1.5
-  useBuffer: 0
+  startSize: 1
+  maxScale: 1.2
+  useBuffer: 1
   material: {fileID: 0}
 --- !u!114 &744327570475365346
 MonoBehaviour:

@@ -80,10 +80,10 @@ public class AudioPeer : MonoBehaviour
         }
     }
 
-    // void GetSpectrumAudioSource()
-    // {
-    //     audioSource.GetSpectrumData(samples, 0, FFTWindow.Blackman);
-    // }
+    void GetSpectrumAudioSource()
+    {
+        audioSource.GetSpectrumData(samples, 0, FFTWindow.Blackman);
+    }
 
     void BandBuffer()
     {

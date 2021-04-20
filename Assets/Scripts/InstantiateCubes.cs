@@ -23,7 +23,7 @@ public class InstantiateCubes : MonoBehaviour
             cubeInstance.transform.parent = this.transform;
             cubeInstance.name = "SampleCube" + i;
             this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, (90f / numCubes) * i, this.transform.eulerAngles.z);
-            cubeInstance.transform.position = Vector3.forward * 400;
+            cubeInstance.transform.position = Vector3.forward * 300;
             int idx = left_to_right ? i : numCubes - 1 - i;
             sampleCubes[idx] = cubeInstance;
             initialSizes[idx] = Random.Range(0, startSize);
@@ -40,7 +40,7 @@ public class InstantiateCubes : MonoBehaviour
                 Vector3 newScale = new Vector3(transform.localScale.x, (AudioPeer.samples[i] * maxScale) + initialSizes[i], transform.localScale.z);
 
                 sampleCubes[i].transform.localScale = newScale;
-                sampleCubes[i].transform.position = new Vector3(sampleCubes[i].transform.position.x, 0 + newScale.y / 2, sampleCubes[i].transform.position.z);
+                sampleCubes[i].transform.position = new Vector3(sampleCubes[i].transform.position.x, transform.position.y + newScale.y / 2, sampleCubes[i].transform.position.z);
 
             }
         }
