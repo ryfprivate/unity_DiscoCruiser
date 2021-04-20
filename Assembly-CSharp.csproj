@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Scenery.cs" />
     <Compile Include="Assets\Scripts\Car.cs" />
     <Compile Include="Assets\Scripts\Portals\DeletePortal.cs" />
+    <Compile Include="Assets\Scripts\InstantiateWaves.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Materials\Stylized Sky.shader" />
