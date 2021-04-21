@@ -55,17 +55,19 @@
   <ItemGroup>
     <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
     <Compile Include="Assets\Scripts\Gates\StartGate.cs" />
-    <Compile Include="Assets\Scripts\InstantiateCubes.cs" />
+    <Compile Include="Assets\Scripts\Objects\InstantiateCubes.cs" />
     <Compile Include="Assets\Imported\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
-    <Compile Include="Assets\Scripts\FreqBandCube.cs" />
+    <Compile Include="Assets\Scripts\Objects\FreqBandCube.cs" />
     <Compile Include="Assets\Scripts\AudioPeer.cs" />
-    <Compile Include="Assets\Scripts\Cloud.cs" />
-    <Compile Include="Assets\Scripts\InstantiateWaves.cs" />
+    <Compile Include="Assets\Scripts\Objects\Cloud.cs" />
     <Compile Include="Assets\Scripts\Gates\EndGate.cs" />
     <Compile Include="Assets\Scripts\Portals\SpawnPortal.cs" />
     <Compile Include="Assets\Scripts\Portals\DeletePortal.cs" />
-    <Compile Include="Assets\Scripts\Scenery.cs" />
-    <Compile Include="Assets\Scripts\Car.cs" />
+    <Compile Include="Assets\Scripts\Scenery\Scenery.cs" />
+    <Compile Include="Assets\Scripts\Objects\Car.cs" />
+    <Compile Include="Assets\Scripts\SeeThrough\ClippingPlane.cs" />
+    <Compile Include="Assets\Scripts\Scenery\Tunnel.cs" />
+    <Compile Include="Assets\Scripts\Game.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />

@@ -27,14 +27,14 @@ public class SpawnPortal : MonoBehaviour
         }
 
         InvokeRepeating("SpawnCar", 0, Random.Range(10f, 30f));
-        InvokeRepeating("SpawnClouds", 0, Random.Range(0f, 3f));
+        InvokeRepeating("SpawnClouds", 0, Random.Range(0f, 10f));
     }
 
     public void SpawnCar()
     {
         Vector3 spawnPosition = new Vector3(4, transform.position.y, transform.position.z);
         GameObject car = Instantiate(_car, spawnPosition, Quaternion.identity, _parent.transform);
-        car.GetComponent<Car>().StartUp(10f, false);
+        car.GetComponent<Car>().StartUp(Game.i.speed * 2f, false);
     }
 
     public void SpawnClouds()

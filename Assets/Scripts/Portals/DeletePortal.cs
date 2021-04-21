@@ -15,6 +15,6 @@ public class DeletePortal : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3(-3.5f, transform.position.y, transform.position.z);
         GameObject car = Instantiate(_car, spawnPosition, Quaternion.identity);
-        car.GetComponent<Car>().StartUp(-8f, true);
+        car.GetComponent<Car>().StartUp(-Game.i.speed / 1.2f, true);
     }
 }

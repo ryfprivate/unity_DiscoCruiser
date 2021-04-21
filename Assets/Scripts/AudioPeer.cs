@@ -16,7 +16,7 @@ public class AudioPeer : MonoBehaviour
 
     private float[] freqBandMax = new float[8];
     private float amplitudeMax;
-    private bool testing = false;
+    private bool testing = true;
 
     public AudioSource audioSource;
 
