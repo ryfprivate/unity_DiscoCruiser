@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Scenery : MonoBehaviour
 {
-    public float speed;
+    private float speed;
     void Start()
     {
-
+        speed = 2f;
     }
-
 
     void FixedUpdate()
     {

@@ -33,7 +33,6 @@ public class Car : MonoBehaviour
         }
         else
         {
-            Debug.Log("is not forward");
             rotation = 180f;
         }
 
