@@ -16,17 +16,26 @@ public class AudioPeer : MonoBehaviour
 
     private float[] freqBandMax = new float[8];
     private float amplitudeMax;
+    private bool testing = false;
 
     public AudioSource audioSource;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        if (testing)
+        {
+            audioSource.Play();
+        }
     }
 
     void Update()
     {
-        // GetSpectrumAudioSource();
+        if (testing)
+        {
+            GetSpectrumAudioSource();
+        }
+
         MakeFrequencyBands();
         BandBuffer();
         CreateAudioBands();
