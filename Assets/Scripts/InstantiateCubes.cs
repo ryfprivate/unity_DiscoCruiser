@@ -23,10 +23,10 @@ public class InstantiateCubes : MonoBehaviour
             cubeInstance.transform.parent = this.transform;
             cubeInstance.name = "SampleCube" + i;
             this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, (90f / numCubes) * i, this.transform.eulerAngles.z);
-            cubeInstance.transform.position = Vector3.forward * 300;
+            cubeInstance.transform.position = Vector3.forward * 350;
             int idx = left_to_right ? i : numCubes - 1 - i;
             sampleCubes[idx] = cubeInstance;
-            initialSizes[idx] = Random.Range(0, startSize);
+            initialSizes[idx] = Random.Range(startSize, startSize + 10);
         }
         this.transform.eulerAngles = offset;
     }

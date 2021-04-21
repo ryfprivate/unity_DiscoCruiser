@@ -409,10 +409,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 6185770208999525836, guid: 345786026fa1e4f4584ca912f7fa86e2, type: 3}
-  maxScale: 30
+  maxScale: 20
   offset: {x: 0, y: 0, z: 0}
   left_to_right: 1
-  startSize: 10
+  startSize: 5
 --- !u!4 &657441354
 Transform:
   m_ObjectHideFlags: 0
@@ -738,10 +738,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 6185770208999525836, guid: 345786026fa1e4f4584ca912f7fa86e2, type: 3}
-  maxScale: 30
+  maxScale: 20
   offset: {x: 0, y: 90, z: 0}
   left_to_right: 0
-  startSize: 10
+  startSize: 5
 --- !u!4 &946080082
 Transform:
   m_ObjectHideFlags: 0
