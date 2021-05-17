@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioSyncer : MonoBehaviour
 {
+    public int band;
     public float bias;
     public float timeStep;
     public float timeToBeat;
@@ -17,7 +18,6 @@ public class AudioSyncer : MonoBehaviour
 
     public virtual void OnBeat()
     {
-        Debug.Log("beat");
         m_timer = 0;
         m_isBeat = true;
     }
@@ -31,7 +31,7 @@ public class AudioSyncer : MonoBehaviour
     {
         // update audio value
         m_previousAudioValue = m_audioValue;
-        m_audioValue = AudioSpectrum.spectrumValue;
+        m_audioValue = AudioSpectrum.I.freqBands[band];
 
         // if audio value went below the bias during this frame
         if (m_previousAudioValue > bias &&
