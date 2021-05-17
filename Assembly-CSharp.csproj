@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{645EAA7E-D36D-458E-D295-73A800585A1F}</ProjectGuid>
+    <ProjectGuid>{D7197408-F927-0C6A-F18F-0BA0767014E3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,11 +53,13 @@
     <UnityVersion>2020.1.14f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
+    <Compile Include="Assets\Scripts\Game.cs" />
     <Compile Include="Assets\Scripts\Gates\StartGate.cs" />
     <Compile Include="Assets\Scripts\Objects\InstantiateCubes.cs" />
     <Compile Include="Assets\Imported\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
     <Compile Include="Assets\Scripts\Objects\FreqBandCube.cs" />
+    <Compile Include="Assets\Scripts\Scenery\Tunnel.cs" />
+    <Compile Include="Assets\Scripts\SeeThrough\ClippingPlane.cs" />
     <Compile Include="Assets\Scripts\AudioPeer.cs" />
     <Compile Include="Assets\Scripts\Objects\Cloud.cs" />
     <Compile Include="Assets\Scripts\Gates\EndGate.cs" />
@@ -65,15 +67,16 @@
     <Compile Include="Assets\Scripts\Portals\DeletePortal.cs" />
     <Compile Include="Assets\Scripts\Scenery\Scenery.cs" />
     <Compile Include="Assets\Scripts\Objects\Car.cs" />
-    <Compile Include="Assets\Scripts\SeeThrough\ClippingPlane.cs" />
-    <Compile Include="Assets\Scripts\Scenery\Tunnel.cs" />
-    <Compile Include="Assets\Scripts\Game.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioSpectrum.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioSyncer.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioSyncScale.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
      <None Include="Assets\Imported\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
      <None Include="Assets\Imported\LowPolyWater_Pack\LowPoly Island\Credits.txt" />
      <None Include="Assets\Imported\LowPolyFantasyClouds\Shaders\CloudsShader.shader" />
+     <None Include="Assets\Imported\LowPolyTreePack\README.txt" />
      <None Include="Assets\Materials\Stylized Sky.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.14f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -636,15 +639,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{820B204B-1664-799C-6B79-99AB5A7789BA}</Project>
+      <Project>{7E2691EB-7C78-37E4-952E-0871822DC38E}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{E6362842-C8FE-67E6-F473-99EDEE7C70D2}</Project>
+      <Project>{96286BF4-5064-318F-FB73-C8E0CAAAF1D2}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{FAABA11E-12E8-0E9B-FD53-40DBB180B403}</Project>
+      <Project>{26C4E230-F2F5-0A48-1743-E783676AD041}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
   </ItemGroup>

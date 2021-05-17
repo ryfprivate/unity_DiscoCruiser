@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioPeer : MonoBehaviour
 {
-    public static float[] samples = new float[512];
+    public static float[] samples = new float[128];
     // Normalized
     public static float[] audioBand = new float[8];
     public static float[] audioBandBuffer = new float[8];
@@ -16,7 +16,7 @@ public class AudioPeer : MonoBehaviour
 
     private float[] freqBandMax = new float[8];
     private float amplitudeMax;
-    private bool testing = false;
+    private bool testing = true;
 
     public AudioSource audioSource;
 
@@ -92,6 +92,19 @@ public class AudioPeer : MonoBehaviour
     void GetSpectrumAudioSource()
     {
         audioSource.GetSpectrumData(samples, 0, FFTWindow.Blackman);
+        float max = 0;
+        for (int i=0; i<samples.Length; i++)
+        {
+            samples[i] *= 1000;
+            if (samples[i] > max)
+            {
+                max = samples[i];
+            }
+        }
+        for (int i = 0; i < samples.Length; i++)
+        {
+            samples[i] /= max;
+        }
     }
 
     void BandBuffer()
@@ -125,7 +138,7 @@ public class AudioPeer : MonoBehaviour
         // 510 samples
 
         int count = 0;
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 6; i++)
         {
             float average = 0;
             int sampleCount = (int)Mathf.Pow(2, i) * 2;
